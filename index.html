@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux de Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍳 Jeux de Cuisine 🍳</h1>
+            <p>Apprends les responsabilités en cuisinant!</p>
+        </header>
+
+        <main>
+            <section id="gameSection" class="game-section">
+                <div id="startScreen" class="screen active">
+                    <h2>Bienvenue!</h2>
+                    <p>Peux-tu préparer un délicieux repas?</p>
+                    <button id="startBtn" class="btn btn-primary">Commencer le jeu</button>
+                </div>
+
+                <div id="gameScreen" class="screen">
+                    <div class="game-info">
+                        <div class="score">
+                            <h3>Score: <span id="score">0</span></h3>
+                        </div>
+                        <div class="timer">
+                            <h3>Temps: <span id="timer">60</span>s</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-content">
+                        <div class="recipe-box">
+                            <h3>Recette: <span id="recipeName">Pâtes Carbonara</span></h3>
+                            <ul id="ingredients" class="ingredients-list">
+                                <li class="ingredient">🍝 Pâtes</li>
+                                <li class="ingredient">🥚 Oeufs</li>
+                                <li class="ingredient">🥓 Bacon</li>
+                                <li class="ingredient">🧀 Fromage</li>
+                            </ul>
+                        </div>
+
+                        <div class="cooking-area">
+                            <h3>Zone de Cuisson</h3>
+                            <div id="cookingZone" class="cooking-zone">
+                                <p id="instruction">Clique sur les ingrédients pour les ajouter!</p>
+                            </div>
+                            <button id="cookBtn" class="btn btn-secondary">Cuire le plat</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="endScreen" class="screen">
+                    <h2>Jeu Terminé!</h2>
+                    <p id="finalScore">Score Final: 0</p>
+                    <p id="message"></p>
+                    <button id="restartBtn" class="btn btn-primary">Rejouer</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
